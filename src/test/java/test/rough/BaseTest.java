@@ -28,6 +28,7 @@ public class BaseTest {
 	private WebDriver driver;
 	private Properties config = new Properties();
 	private FileInputStream fis;
+	public boolean grid = false;
 	
 	@BeforeSuite
 	public void setUpFramework(){
@@ -65,7 +66,11 @@ public class BaseTest {
 	
 	public void openBrowser(String browser) {
 		
-		DriverFactory.setRemote(false);
+		if(System.getenv("ExecutionType")!=null && System.getenv("ExecutionType").equals("Grid")){
+			grid= true;
+		}
+		
+		DriverFactory.setRemote(grid);
 		if(DriverFactory.isRemote()){
 			
 			DesiredCapabilities cap = null;
