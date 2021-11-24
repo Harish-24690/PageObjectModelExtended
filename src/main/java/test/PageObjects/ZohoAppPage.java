@@ -11,7 +11,7 @@ public class ZohoAppPage extends BasePage {
 	@FindBy(how =How.XPATH,using="//*[@id='zl-myapps']/div[1]/div[4]/div/a/span")
 	public WebElement cliqLink;
 
-	@FindBy(how =How.XPATH,using="//*[@id='zl-myapps']/div[1]/div[6]/div/a/span")
+	@FindBy(how =How.XPATH,using="//*[@id='block-system-main']/div/div[3]/section[2]/div/div/ul/li[1]/a/span[2]/label")
 	public WebElement crmLink;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='zl-myapps']/div[1]/div[7]/div/a/span")

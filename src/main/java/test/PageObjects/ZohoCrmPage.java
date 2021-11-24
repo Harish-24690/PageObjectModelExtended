@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ZohoCrmPage extends BasePage {
 	
-	@FindBy(how=How.XPATH,using="//*[@id='mainMenuTabDiv']/crm-menu/div[1]/crm-tab/div[2]/div[1]/a")
+	@FindBy(how=How.XPATH,using="//*[@id='mini-panel-product_menu']/div/div[1]/div/a")
 	public WebElement homeButton;
 
 	@Override
