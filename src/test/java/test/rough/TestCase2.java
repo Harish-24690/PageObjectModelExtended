@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import test.PageObjects.ZohoHomePage;
 import test.PageObjects.ZohoLoginPage;
+import test.testcases.BaseTest;
 
 public class TestCase2 extends BaseTest{
 	
@@ -22,7 +23,7 @@ public class TestCase2 extends BaseTest{
 		openBrowser(browser);
 		ZohoHomePage home= new ZohoHomePage().open("https://www.zoho.com/index1.html");
 		ZohoLoginPage page =home.gotoLogin();
-		page.login(username, password);
+		page.Validlogin(username, password);
 		
 		/*getDriver().findElement(By.xpath("//*[@id='block-system-main']/div/div[1]/div/div/div[3]/div/div[4]/div/a[1]")).click();
 		getDriver().findElement(By.xpath("//*[@id='login_id']")).sendKeys(username);

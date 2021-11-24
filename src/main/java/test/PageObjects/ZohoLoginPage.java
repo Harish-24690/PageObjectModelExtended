@@ -24,7 +24,7 @@ public class ZohoLoginPage extends BasePage {
 	@FindBy(how = How.XPATH, using = "//*[@id='nextbtn']/span")
 	public WebElement loginBtn;;
 
-	public ZohoLoginPage login(String username, String password) {
+	public ZohoLoginPage Invalidlogin(String username, String password) {
 
 		
 		type(emailblock,username);              //emailblock.sendKeys(username);
@@ -40,6 +40,24 @@ public class ZohoLoginPage extends BasePage {
 		click(loginBtn);                        //loginBtn.click();
 		return this;
 	}
+	
+	public ZohoAppPage Validlogin(String username, String password) {
+
+		
+		type(emailblock,username);              //emailblock.sendKeys(username);
+		click(nextBtn);                         //nextBtn.click();
+		
+        try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    type(passwordblock,password);	         //passwordblock.sendKeys(password);
+		click(loginBtn);                        //loginBtn.click();
+		return (ZohoAppPage) openPage(ZohoAppPage.class);
+	}
+
 
 	@Override
 	protected ExpectedCondition getPageLoadCondition() {

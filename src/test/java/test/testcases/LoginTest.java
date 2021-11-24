@@ -1,4 +1,4 @@
-package test.rough;
+package test.testcases;
 
 import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
@@ -28,7 +28,7 @@ public class LoginTest extends BaseTest {
 		openBrowser(data.get("browser"));
 		ZohoHomePage home = new ZohoHomePage().open("https://www.zoho.com/index1.html");
 		ZohoLoginPage page = home.gotoLogin();
-		page.login(data.get("username"), data.get("password"));
+		page.Invalidlogin(data.get("username"), data.get("password"));
 		quit();
 
 	}

@@ -1,4 +1,4 @@
-package test.rough;
+package test.testcases;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -29,6 +29,26 @@ public class BaseTest {
 	private Properties config = new Properties();
 	private FileInputStream fis;
 	public boolean grid = false;
+	private String DefaultUsername;
+	private String DefaultPassword;
+	
+	public String getDefaultUsername() {
+		return DefaultUsername;
+	}
+
+	public void setDefaultUsername(String defaultUsername) {
+		DefaultUsername = defaultUsername;
+	}
+
+	public String getDefaultPassword() {
+		return DefaultPassword;
+	}
+
+	public void setDefaultPassword(String defaultPassword) {
+		DefaultPassword = defaultPassword;
+	}
+
+	
 	
 	@BeforeSuite
 	public void setUpFramework(){
@@ -112,7 +132,8 @@ public class BaseTest {
 		DriverManager.setWebDriver(driver);
 		DriverManager.getDriver().manage().window().maximize();
 		DriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+		setDefaultUsername(config.getProperty("DefaultUsername"));
+		setDefaultPassword(config.getProperty("DefaultPassword"));
 	}
 
 	public void quit() {

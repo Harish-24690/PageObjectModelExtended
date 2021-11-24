@@ -12,15 +12,15 @@
   <test name="loginTest">
     <classes>
       
-      <class name="test.rough.LoginTest"/>
+      <class name="test.testcases.LoginTest"/>
     </classes>
     
   </test> <!-- Test -->
- <!--  <test name="TestCase2">
+  <test name="ZohoCrMPageTest">
     <classes>
-      <class name="test.rough.TestCase2"/>
+      <class name="test.testcases.ZohoCRMPageTest"/>   
       
     </classes>
     
-  </test> Test -->
+  </test> 
 </suite> <!-- Suite -->
